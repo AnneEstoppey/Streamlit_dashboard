@@ -18,7 +18,7 @@ streamlit-extras==0.2.7 (conda install)
 The file is available here: https://data.world/ehughes/superstore-sales-2023
 (you might have to sign in to be able to download it)
 
-In the tutorial the file is refered as a xlsx (Excel format), while the download is a CSV.
+In the tutorial the file is refered as a xlsx (Excel format), while the download is a CSV.<br>
 In the code available on this repo, I have taken this into consideration, and reformatted the dates to datetime in the dataframe.
 
 ### References
@@ -29,12 +29,13 @@ Note: it was easier to refer to the .py file from the repo than the coding bits 
 
 
 ### Troubleshooting with Streamlit
-install streamlit and streamlit-extras with conda. I tried to install streamlit-extras with pip, but it was an error message concerning the wheel and the package didn't install. After trying different things, I uninstalled my streamlit entirely and reinstalled with conda. Same with streamlit-extras and that finally worked:
-> conda install streamlit
+Install streamlit and streamlit-extras with conda.<br> 
+I tried to install streamlit-extras with pip, but it was an error message concerning the wheel and the package didn't install. After trying different things, I uninstalled my streamlit entirely and reinstalled with conda. Same with streamlit-extras and that finally worked:<br>
+> conda install streamlit<br>
 > conda install streamlit-extras
 
-After that I had an issue with launching the app with command: 'streamlit run app.py'. 
-The error message was similar to this: 
+After that I had an issue with launching the app with command: 'streamlit run app.py'.<br>
+The error message was similar to this:<br>
 'File "<path to user>/anaconda3/envs/python311/bin/streamlit", line 7, in from streamlit.cli import main ModuleNotFoundError: No module named 'streamlit.cli'.
 
 ---> Open the file 'streamlit' in a text editor (it is a text file), and edit line 7 (or 6) to 'from streamlit.web.cli import main' (the original line is 'from streamlit.cli import main'). That solved the problem and then I had no issues running my streamlit app.
