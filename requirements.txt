@@ -1,0 +1,9 @@
+
+altair==5.1.2
+millify==0.1.1
+numpy==1.26.2
+pandas==2.1.1
+plotly==5.18.0
+streamlit==1.26.0
+streamlit-card==0.0.4
+streamlit-extras==0.2.7
