@@ -9,9 +9,13 @@ from streamlit_extras.metric_cards import style_metric_cards # beautify metric c
 import plotly.graph_objects as go
 import altair as alt
 
+
+st.set_page_config(page_title="Superstore Sales Analytics", page_icon="📈",layout="wide",initial_sidebar_state='collapsed')
+
+# this function is used to style the metric cards
 def style_metric_cards(
     color:str = "#232323",
-    background_color: str = "#FFF",
+    background_color: str = "#FDFFF4",
     border_size_px: int = 1,
     border_color: str = "#CCC",
     border_radius_px: int = 5,
@@ -44,17 +48,15 @@ def style_metric_cards(
         unsafe_allow_html=True,
     )
 
-st.set_page_config(page_title="Superstore Sales Analytics", page_icon="📈",layout="wide",initial_sidebar_state='collapsed')
-
-st.markdown("""
-        <style>
-               .block-container {
-                    padding-top: 1rem;
-                    padding-bottom: 1rem;
-                   
-                }
-        </style>
-        """, unsafe_allow_html=True)
+    # st.markdown("""
+    #         <style>
+    #             .block-container {
+    #                     padding-top: 1rem;
+    #                     padding-bottom: 1rem;
+                    
+    #                 }
+    #         </style>
+    #         """, unsafe_allow_html=True)
 
 
 
@@ -105,12 +107,11 @@ dash_1 = st.container()
 dash_2 = st.container()
 dash_3 = st.container()
 dash_4 = st.container()
-dash_5 = st.container()
-dash_6 = st.container()
+
 
 
 with sidebar:
-   # st.header("")
+    # st.header("Test")
     # get the years as a list
     year_list= grp_years_sales.index.to_list() #list(df.year.unique())
     year_list.insert(0, "All")
@@ -177,7 +178,7 @@ with dash_3:
             )
         chart = chart.properties(title="Top 10 Selling Products" )
 
-        
+
         st.altair_chart(chart,use_container_width=True)
 
         
@@ -185,7 +186,7 @@ with dash_3:
         chart = alt.Chart(top_product_profit).mark_bar(opacity=0.9,color="#9FC131").encode(
                 x='sum(Profit):Q',
                 y=alt.Y('Product Name:N', sort='-x')
-                
+
             )
         chart = chart.properties(title="Top 10 Most Profitable Products" )
 
@@ -200,18 +201,22 @@ with dash_4:
     with col1:
         value =int(np.round(df['days to ship'].mean()))  # Example value
 
+        # Create figure with gauge, where 'go' is plotly.graph_objects
         fig = go.Figure(go.Indicator(
             mode="gauge+number",
             value=value,
             title={'text': "Average Shipping Days"},
             gauge={'axis': {'range': [df['days to ship'].min() , df['days to ship'].max()]},
                 'bar': {'color': "#005C53"},
+
                 }
         ))
 
-        fig.update_layout(height=350) 
+        # 'margin' is used to fix the issue with misalignment of value under the gauge when sidebare is opened 
+        fig.update_layout(height=350, margin=dict(l=80, r=80, b=80, t=80, pad=0))
 
         st.plotly_chart(fig, use_container_width=True)
+
 
     with col2:
         custom_colors = {'Furniture': '#005C53', 'Office Supplies': '#9FC131', 'Technology': '#042940'}
@@ -226,7 +231,7 @@ with dash_4:
         )
 
         text = alt.Chart(df).mark_text(dx=-15, dy=30, color='white').encode(
-             y=alt.Y('sum(Sales):Q', stack='zero', axis=alt.Axis(format='~s') ),
+            y=alt.Y('sum(Sales):Q', stack='zero', axis=alt.Axis(format='~s') ),
             x=alt.X('year:N'),
             detail='Category:N',
             text=alt.Text('sum(Sales):Q', format='~s')
@@ -235,6 +240,6 @@ with dash_4:
         chart = bars + text
 
         chart = chart.properties(title="Sales trends for Product Categories over the years" )
-      
+
 
         st.altair_chart(chart,use_container_width=True)
