@@ -8,7 +8,7 @@ The app runs with Python 3.11.5<br>
 For install specs and troubleshooting, see section 'Troubleshooting with Streamlit' below.
 
 ### Data file 'Superstore_2023.csv'
-The file is available here: https://data.world/ehughes/superstore-sales-2023
+The file is available here: https://data.world/ehughes/superstore-sales-2023<br>
 (you might have to sign in to be able to download it)
 
 In the tutorial the file is refered as a xlsx (Excel format), while the download is a CSV.<br>
