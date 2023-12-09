@@ -1,3 +1,7 @@
+# Dashboard with Streamlit
+![dash_screenshot](https://github.com/AnneEstoppey/Streamlit_dashboard/assets/35219455/49963be2-b655-44e4-a1c9-3038cea71b6c)
+
+
 ### Main requirements
 python==3.11.5<br>
 altair==5.1.2<br>
