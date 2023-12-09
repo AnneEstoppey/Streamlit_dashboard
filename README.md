@@ -1,5 +1,5 @@
 # Dashboard with Streamlit
-https://dashboardappst.streamlit.app/
+Open the app here: https://dashboardappst.streamlit.app/
 
 ![dash_screenshot](https://github.com/AnneEstoppey/Streamlit_dashboard/assets/35219455/49963be2-b655-44e4-a1c9-3038cea71b6c)
 
