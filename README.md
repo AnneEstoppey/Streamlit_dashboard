@@ -1,18 +1,11 @@
 # Dashboard with Streamlit
+https://dashboardappst.streamlit.app/
+
 ![dash_screenshot](https://github.com/AnneEstoppey/Streamlit_dashboard/assets/35219455/49963be2-b655-44e4-a1c9-3038cea71b6c)
 
-
 ### Main requirements
-python==3.11.5<br>
-altair==5.1.2<br>
-millify==0.1.1<br>
-numpy==1.26.2<br>
-pandas==2.1.1<br>
-plotly==5.18.0<br>
-streamlit==1.26.0 (conda install)<br>
-streamlit-card==0.0.4 (conda install)<br>
-streamlit-extras==0.2.7 (conda install)
-
+The app runs with Python 3.11.5<br>
+For install specs and troubleshooting, see section 'Troubleshooting with Streamlit' below.
 
 ### Data file 'Superstore_2023.csv'
 The file is available here: https://data.world/ehughes/superstore-sales-2023
@@ -38,7 +31,7 @@ After that I had an issue with launching the app with command: 'streamlit run ap
 The error message was similar to this:<br>
 'File "<path to user>/anaconda3/envs/python311/bin/streamlit", line 7, in from streamlit.cli import main ModuleNotFoundError: No module named 'streamlit.cli'.
 
----> Open the file 'streamlit' in a text editor (it is a text file), and edit line 7 (or 6) to 'from streamlit.web.cli import main' (the original line is 'from streamlit.cli import main'). That solved the problem and then I had no issues running my streamlit app.
+---> Open the file 'streamlit' in a text editor (it is a text file), and edit line 7 (or 6) with: 'from streamlit.web.cli import main' (the original line is 'from streamlit.cli import main'). That solved the problem and then I had no issues running my streamlit app.
 
 See thread on streamlit github repo here: https://github.com/streamlit/streamlit/issues/5255#issuecomment-1460927141
 
