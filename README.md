@@ -1,38 +1,31 @@
-Install and troubleshooting for Streamlit dashboard
----------------------------------------------------
-
----> 'tutorial' article here: https://python.plainenglish.io/creating-interactive-analytics-dashboards-using-pythons-streamlit-43a770bc3194
-
----> github repo here: https://github.com/mattyjr007/Superstore-sales-Streamlit/tree/main
-
-Note: it was easier to refer to the .py file from the repo than the coding bits in the article :)
-
-
-Main requirements:
------------------
-python==3.11.5
-altair==5.1.2
-millify==0.1.1
-numpy==1.26.2
-pandas==2.1.1
-plotly==5.18.0
-streamlit==1.26.0 (conda install)
-streamlit-card==0.0.4 (conda install)
+### Main requirements
+python==3.11.5<br>
+altair==5.1.2<br>
+millify==0.1.1<br>
+numpy==1.26.2<br>
+pandas==2.1.1<br>
+plotly==5.18.0<br>
+streamlit==1.26.0 (conda install)<br>
+streamlit-card==0.0.4 (conda install)<br>
 streamlit-extras==0.2.7 (conda install)
 
 
-Data file 'Superstore_2023.csv'
-------------------------------
+### Data file 'Superstore_2023.csv'
 The file is available here: https://data.world/ehughes/superstore-sales-2023
 (you might have to sign in to be able to download it)
 
 In the tutorial the file is refered as a xlsx (Excel format), while the download is a CSV.
 In the code available on this repo, I have taken this into consideration, and reformatted the dates to datetime in the dataframe.
 
+### References
+---> 'tutorial' article here: https://python.plainenglish.io/creating-interactive-analytics-dashboards-using-pythons-streamlit-43a770bc3194
+---> github repo here: https://github.com/mattyjr007/Superstore-sales-Streamlit/tree/main
 
-Troubleshooting with Streamlit:
-------------------------------
-- install streamlit and streamlit-extras with conda. I tried to install streamlit-extras with pip, but it was an error message concerning the wheel and the package didn't install. After trying different things, I uninstalled my streamlit entirely and reinstalled with conda. Same with streamlit-extras and that finally worked:
+Note: it was easier to refer to the .py file from the repo than the coding bits in the article :)
+
+
+### Troubleshooting with Streamlit
+install streamlit and streamlit-extras with conda. I tried to install streamlit-extras with pip, but it was an error message concerning the wheel and the package didn't install. After trying different things, I uninstalled my streamlit entirely and reinstalled with conda. Same with streamlit-extras and that finally worked:
 > conda install streamlit
 > conda install streamlit-extras
 
