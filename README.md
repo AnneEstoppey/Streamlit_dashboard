@@ -15,8 +15,8 @@ In the tutorial the file is refered as a xlsx (Excel format), while the download
 In the code available on this repo, I have taken this into consideration, and reformatted the dates to datetime in the dataframe.
 
 ### References
----> 'tutorial' article here: https://python.plainenglish.io/creating-interactive-analytics-dashboards-using-pythons-streamlit-43a770bc3194
----> github repo here: https://github.com/mattyjr007/Superstore-sales-Streamlit/tree/main
+---> 'tutorial' article here: https://python.plainenglish.io/creating-interactive-analytics-dashboards-using-pythons-streamlit-43a770bc3194<br>
+---> github repo here: https://github.com/mattyjr007/Superstore-sales-Streamlit/tree/main<br>
 
 Note: it was easier to refer to the .py file from the repo than the coding bits in the article :)
 
